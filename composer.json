@@ -1,0 +1,29 @@
+{
+	"name": "onetwo360/onetwo360-api-client",
+	"description": "API Client library for the OneTwo360 platform",
+	"keywords": [
+		"OneTwo360",
+		"360 Product Photos",
+		"API Client",
+		"Rest API",
+		
+	],
+	"homepage": "https://github.com/onetwo360/onetwo360-php-client",
+	"type": "library",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Flemming Andersen",
+			"email": "flemming@flamingcode.com",
+			"homepage": "http://flamingcode.com"
+		}
+	],
+	"require": {
+		"php": ">=5.3.0"
+	},
+	"autoload": {
+		"psr-0": {
+			"OneTwo360": "library/"
+		}
+	}
+}
