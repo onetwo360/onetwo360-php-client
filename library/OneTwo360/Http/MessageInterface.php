@@ -10,9 +10,9 @@ namespace OneTwo360\Http;
  * MessageInterface
  *
  * @author Flemming Andersen <flemming@flamingcode.com>
- * @copyright (c) 2013, Flaming Code
+ * @copyright (c) 2014, Hammerti.me
  * @link http://github.com/flamingcode/my-repo for the canonical source repository
- * @license http://opensource.org/licenses/GPL-2.0 GPL-2.0
+ * @license http://opensource.org/licenses/MIT MIT
  */
 interface MessageInterface
 {
