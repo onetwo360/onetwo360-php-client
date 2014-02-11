@@ -23,7 +23,7 @@
 	},
 	"autoload": {
 		"psr-0": {
-			"OneTwo360": "library/"
+			"OneTwo360\\": "library/"
 		}
 	}
 }
