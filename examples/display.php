@@ -1,4 +1,7 @@
 <?php
+// Since we are "inside" the examples dir we need to go up to get the autoload file from composer
+require '../../../autoload.php';
+
 if (!array_key_exists('versionId', $_GET))
 	die('No versionId specified! Specify as get param');
 

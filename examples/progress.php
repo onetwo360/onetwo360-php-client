@@ -1,4 +1,7 @@
 <?php
+// Since we are "inside" the examples dir we need to go up to get the autoload file from composer
+require '../../../autoload.php';
+
 if (!array_key_exists('pollUrl', $_GET))
 	die('No pollUrl specified! Specify as get param');
 

@@ -1,4 +1,7 @@
 <?php
+// Since we are "inside" the examples dir we need to go up to get the autoload file from composer
+require '../../../autoload.php';
+
 if (!array_key_exists('containerId', $_GET))
 	die('No containerId specified! Specify as get param');
 

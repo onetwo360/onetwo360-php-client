@@ -1,4 +1,7 @@
 <?php
+// Since we are "inside" the examples dir we need to go up to get the autoload file from composer
+require '../../../autoload.php';
+
 if (!array_key_exists('folderId', $_GET))
 	die('No folderId specified! Specify as get param');
 $folderId = $_GET['folderId'];
