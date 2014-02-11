@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Copyright (c) 2013, Flaming Code
+ * Copyright (c) 2014, Hammerti.me
  */
 
 namespace OneTwo360\Http\Exception;
