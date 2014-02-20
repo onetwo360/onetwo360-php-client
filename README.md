@@ -1,6 +1,8 @@
 OneTwo360 API Client
 =====================
 
+[![Build Status](https://travis-ci.org/onetwo360/onetwo360-php-client.png?branch=master)](https://travis-ci.org/onetwo360/onetwo360-php-client)
+
 Installation
 ------------
 
