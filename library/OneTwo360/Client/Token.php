@@ -48,9 +48,19 @@ class Token
 	 * 
 	 * @param array $data
 	 */
-	public function __construct(array $data)
+	public function __construct(array $data = null)
 	{
 		$this->createdAt = new DateTime;
+		if (is_array($data))
+			$this->setData($data);
+	}
+	
+	/**
+	 * 
+	 * @param array $data
+	 */
+	protected function setData(array $data)
+	{
 		$methods = get_class_methods($this);
 		foreach ($data as $k => $v) {
 			$method = 'set' . ucfirst($k);

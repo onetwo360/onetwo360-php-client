@@ -364,11 +364,6 @@ class Client
 			$this->setClientId($clientId);
 		if (null !== $tokenCacheFile)
 			$this->setTokenCacheFile($tokenCacheFile);
-		
-		$this->httpClient = new HttpClient;
-		$this->httpClient->setOptions(array(
-			'user_agent' => 'OneTwo360 API Client',
-		));
 	}
 	
 	/**
@@ -397,7 +392,25 @@ class Client
 	 */
 	public function getHttpClient()
 	{
+		if (!$this->httpClient) {
+			$httpClient = new HttpClient;
+			$httpClient->setOptions(array(
+				'user_agent' => 'OneTwo360 API Client',
+			));
+			$this->httpClient = $httpClient;
+		}
 		return $this->httpClient;
+	}
+	
+	/**
+	 * 
+	 * @param HttpClient $httpClient
+	 * @return Client
+	 */
+	public function setHttpClient(HttpClient $httpClient)
+	{
+		$this->httpClient = $httpClient;
+		return $this;
 	}
 	
 	/**
