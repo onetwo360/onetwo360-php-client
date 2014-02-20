@@ -7,6 +7,7 @@
 namespace OneTwo360Test\Client;
 
 use PHPUnit_Framework_TestCase as TestCase;
+use PHPUnit_Framework_MockObject_MockObject as MockObject;
 
 use OneTwo360\Client\Token;
 use OneTwo360\Client\Client;
@@ -21,6 +22,16 @@ use OneTwo360\Client\Client;
  */
 class ClientTest extends TestCase
 {
+	/**
+	 * 
+	 * @return MockObject
+	 */
+	protected function getMockHttpClient()
+	{
+		$httpClientMock = $this->getMock('OneTwo360\Http\Client', array('send'));
+		return $httpClientMock;
+	}
+	
 	public function testIfTestIsPossible()
 	{
 		$this->assertTrue(true);
