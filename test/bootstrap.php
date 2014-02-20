@@ -1,4 +1,6 @@
 <?php
 
 $loader = require __DIR__ . '/../vendor/autoload.php';
-//$loader->add('OAuth2', __DIR__);
+
+if (!$loader)
+	throw new Exception('Unable to get autoloader. Did you install the required dependencies through composer?');
