@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit bootstrap="./bootstrap.php" colors="true">
+	<testsuites>
+		<testsuite name="OneTwo360 API Client Test Suite">
+			<directory>./OneTwo360Test</directory>
+		</testsuite>
+	</testsuites>
+
+	<filter>
+		<whitelist>
+			<directory suffix=".php">./../library</directory>
+		</whitelist>
+	</filter>
+</phpunit>
