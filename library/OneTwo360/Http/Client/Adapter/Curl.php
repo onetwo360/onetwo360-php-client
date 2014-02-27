@@ -157,7 +157,7 @@ class Curl implements AdapterInterface
 		
 		$this->response = $rawResponse;
 		
-		// cURL automatically decodes chunked-messages, this means we have to disallow the Zend\Http\Response to do it again
+		// cURL automatically decodes chunked-messages, this means we have to disallow the OneTwo360\Http\Response to do it again
 		if (stripos($this->response, "Transfer-Encoding: chunked\r\n")) {
 			$this->response = str_ireplace("Transfer-Encoding: chunked\r\n", '', $this->response);
 		}
