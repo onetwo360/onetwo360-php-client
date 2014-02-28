@@ -8,6 +8,8 @@ namespace OneTwo360Test\Http;
 
 use PHPUnit_Framework_TestCase as TestCase;
 
+use OneTwo360\Http\Message;
+
 /**
  * MessageTest
  *
@@ -18,6 +20,16 @@ use PHPUnit_Framework_TestCase as TestCase;
  */
 class MessageTest extends TestCase
 {
+	public function testDefaultValues()
+	{
+		$message = $this->getMockForAbstractClass('OneTwo360\Http\Message');
+		/* @var $message \OneTwo360\Http\Message */
+		
+		$this->assertSame(Message::VERSION_11, $message->getVersion());
+		$this->assertSame(array(), $message->getHeaders());
+		$this->assertSame('', $message->getContent());
+	}
+	
 	public function testGettersAndSetters()
 	{
 		$message = $this->getMockForAbstractClass('OneTwo360\Http\Message');
@@ -77,10 +89,9 @@ class MessageTest extends TestCase
 		
 		$this->assertSame(array('Header01' => 'New Header01 Value'), $message->getHeaders());
 		
-		// Reset headers
-		$message->setHeaders(array());
-		
-		$this->assertSame(array(), $message->getHeaders());
+		// Reset object
+		$message = $this->getMockForAbstractClass('OneTwo360\Http\Message');
+		/* @var $message \OneTwo360\Http\Message */
 		
 		$headers = array(
 			'Header01' => 'Header01 Value',
