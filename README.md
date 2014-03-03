@@ -14,7 +14,7 @@ This is done by adding the following line to the require section of your compose
 
 Now all you need to do is run the installation like this
 
-	$ php composer.phar install
+	$ php composer.phar update
 
 Test it out!
 ------------
