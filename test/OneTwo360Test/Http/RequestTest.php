@@ -9,7 +9,6 @@ namespace OneTwo360Test\Http;
 use PHPUnit_Framework_TestCase as TestCase;
 
 use ReflectionClass;
-use ReflectionMethod;
 
 use OneTwo360\Http\Request;
 
