@@ -49,7 +49,9 @@ class ApplicationHttp extends Part
 	
 	public function setContentId($id)
 	{
-		$this->contentId = (string) $id;
+		if (!empty($id))
+			$this->addHeader('Content-ID', '<' . $id . '>', true);
+		$this->contentId = $id;
 		return $this;
 	}
 	
@@ -62,14 +64,6 @@ class ApplicationHttp extends Part
 	{
 		$this->childRequest = $request;
 		return $this;
-	}
-	
-	public function renderHeaders()
-	{
-		$contentId = $this->getContentId();
-		if (!empty($contentId))
-			$this->addHeader('Content-ID', '<' . $contentId . '>');
-		return parent::renderHeaders();
 	}
 	
 	public function getContent()

@@ -77,11 +77,11 @@ class Multipart extends Request
 	{
 		$content = '';
 		foreach ($this->parts as $part) {
-			// Boundary must be on new line
+			// Boundary must be on a separate line
 			$content .= "\r\n--" . $this->getBoundary() . "\r\n";
 			$content .= $part->toString();
 		}
-		// Boundary must be on new line
+		// Boundary must be on a separate line
 		$content .= "\r\n--" . $this->getBoundary() . '--';
 		return $content;
 	}
